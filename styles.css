@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.tarjeta h3 {
+  font-size: 1rem;
+  color: #111;
+}
+
+.tarjeta p {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.precio {
+  font-weight: bold;
+  color: #2a7ae2;
+  font-size: 1rem !important;
+}
+
+.btn-carrito {
+  padding: 8px;
+  background-color: #2a7ae2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.btn-carrito:hover:not(:disabled) {
+  background-color: #1a5cbf;
+}
+
+.btn-carrito:disabled {
+  background-color: #aaa;
+  cursor: default;
+}
+
+.btn-resenas {
+  padding: 8px;
+  background-color: #eeeeee;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.btn-resenas:hover {
+  background-color: #ddd;
+}
+
+.resenas {
+  display: none;
+  margin-top: 6px;
+}
+
+.resenas.visible {
+  display: block;
+}
+
+.resena {
+  border-top: 1px solid #eee;
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.resena strong {
+  color: #222;
+}
+
+.sin-resenas {
+  font-size: 0.8rem;
+  color: #999;
+  font-style: italic;
+}
